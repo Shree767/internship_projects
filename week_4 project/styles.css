@@ -1,0 +1,539 @@
+.cover-container {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.cover-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+
+.cover-image:hover {
+  transform: scale(1.02);
+}
+
+.cover-image {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cover-container {
+  background: var(--tech-gradient);
+}
+
+.cover-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.decorative-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(33, 150, 243, 0.1) 0%, rgba(33, 150, 243, 0.3) 100%);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.cover-image:hover {
+  transform: scale(1.02);
+}
+
+.cover-image {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cover-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" preserveAspectRatio="none"><rect width="400" height="600" fill="rgba(240,240,240,0.8)"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/></rect></svg>');
+}
+
+.decorative-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(33, 150, 243, 0.1) 0%, rgba(33, 150, 243, 0.3) 100%);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+  }
+  
+  :root {
+    --primary-color: #f6f8f9;
+    --primary-dark: #1976d2;
+    --text-color: #111;
+    --background-color: #f4f4f4;
+    --shadow-color: rgba(0, 0, 0, 0.3);
+    --transition-speed: 0.3s;
+    --gradient-color: linear-gradient(135deg, rgba(33, 150, 243, 0.2) 0%, rgba(33, 150, 243, 0.1) 100%);
+    --tech-gradient: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  }
+  
+  .magazine-cover {
+    background: linear-gradient(135deg, #1a1a1a 0%, #242424 100%);
+  }
+  
+  .caption {
+    background: rgba(0, 0, 0, 0.8);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+.magazine-cover {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto;
+  overflow: hidden;
+  box-shadow: 0 10px 30px var(--shadow-color);
+  border-radius: 12px;
+}
+
+.cover-image {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  transition: transform var(--transition-speed) ease;
+  will-change: transform;
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 12px;
+}
+
+
+.cover-image {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.cover-image {
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" preserveAspectRatio="none"><rect width="400" height="600" fill="rgba(240,240,240,0.8)"><animate attributeName="fill-opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/></rect></svg>');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+
+.decorative-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.5) 100%);
+  z-index: 1;
+}
+
+.cover-image:hover {
+  transform: scale(1.05);
+}
+
+.decorative-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--gradient-color);
+  z-index: 1;
+}
+
+.cover-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  color: white;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  transition: text-shadow var(--transition-speed) ease;
+}
+
+.cover-title:hover {
+  text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.7);
+}
+
+.headline {
+  position: absolute;
+  z-index: 2;
+  transition: all var(--transition-speed) ease;
+}
+
+.issue-number {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2rem;
+  color: #fff;
+  margin-right: 10px;
+
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.headline.top-left {
+  top: 20px;
+  left: 20px;
+}
+
+.headline.center-right {
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+
+.headline.bottom-left {
+  bottom: 140px;
+  left: 20px;
+}
+
+.headline.bottom-right {
+  bottom: 80px;
+  right: 20px;
+}
+
+.headline .feature-badge,
+.headline .article-badge {
+  display: block;
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--primary-color);
+  margin-bottom: 5px;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+}
+
+.feature-title,
+.article-title {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  margin: 0;
+  line-height: 1.2;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.feature-title {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.article-title {
+  font-size: clamp(1.2rem, 3vw, 2rem);
+}
+
+.issue-date {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.article-badge {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.article-title {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(1rem, 3vw, 1.2rem);
+  color: #fff;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.inside-badge {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 2px 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  margin-bottom: 5px;
+}
+
+.inside-content {
+  font-family: 'Roboto', sans-serif;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #fff;
+  font-weight: 500;
+}
+
+.cta-button {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  box-shadow: 0 5px 15px rgba(233, 30, 99, 0.4);
+  transition: all var(--transition-speed) ease;
+  will-change: transform;
+  z-index: 2;
+}
+
+.cta-button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(233, 30, 99, 0.5);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 8px rgba(233, 30, 99, 0.3);
+}
+
+.button-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  margin-right: 10px;
+  color: #111;
+}
+
+.button-price {
+  font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+  color: rgba(86, 86, 86, 0.8);
+}
+
+.top-left {
+  top: 30px;
+  left: 20px;
+}
+
+.center-right {
+  top: 120px;
+  right: 20px;
+}
+
+.bottom-left {
+  bottom: 120px;
+  left: 20px;
+}
+
+.bottom-right {
+  bottom: 120px;
+  right: 20px;
+}
+
+@media (max-width: 500px) {
+  .magazine-cover {
+    margin: 20px;
+  }
+  
+  .cover-title {
+    font-size: 2rem;
+  }
+  
+  .feature-title {
+    font-size: 1.5rem;
+  }
+  
+  .article-title {
+    font-size: 1rem;
+  }
+  
+  .inside-content {
+    font-size: 0.8rem;
+  }
+}
+
+@media print {
+  .magazine-cover {
+    box-shadow: none;
+  }
+  
+  .cover-image {
+    filter: none;
+  }
+  
+  .headline {
+    background: rgba(0, 0, 0, 0.8);
+  }
+  
+  .cover-title {
+    color: CanvasText;
+    text-shadow: 2px 2px 4px black;
+  }
+  
+  .feature-title,
+  .article-title {
+    color: CanvasText;
+  }
+  
+  .cta-button {
+    background: Highlight;
+    color: HighlightText;
+    box-shadow: none;
+  }
+}
+
+@media (forced-colors: active) {
+  .cover-title {
+    color: CanvasText;
+    text-shadow: 2px 2px 4px black;
+  }
+  
+  .headline {
+    background: CanvasText;
+    border-left: 4px solid Highlight;
+  }
+  
+  .cta-button {
+    background: Highlight;
+    color: HighlightText;
+    box-shadow: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.cover-image {
+  animation: fadeIn 1s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .magazine-cover {
+    height: 400px;
+  }
+
+  .cover-image {
+    height: 100%;
+  }
+
+  .headline {
+    padding: 10px;
+  }
+
+  .headline.top-left,
+  .headline.bottom-left {
+    left: 15px;
+  }
+
+  .headline.center-right,
+  .headline.bottom-right {
+    right: 15px;
+  }
+
+  .headline.center-right {
+    top: 45%;
+  }
+
+  .headline.bottom-left {
+    bottom: 100px;
+  }
+
+  .headline.bottom-right {
+    bottom: 50px;
+  }
+
+  .feature-title {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+  }
+
+  .article-title {
+    font-size: clamp(1rem, 4vw, 1.8rem);
+  }
+
+  .cta-button {
+    padding: 12px 24px;
+    font-size: 0.9rem;
+  }
+}
